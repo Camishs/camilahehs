@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- =============================================
+       META E CONFIGURAÇÕES BÁSICAS
+       ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Camila — Artista Visual. Portfólio de pintura, escultura e fotografia." />
+  <title>Camila — Artista Visual</title>
+
+  <!-- Fonte do Google Fonts via @import no CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Folha de estilos principal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light-theme">
+
+  <!-- =============================================
+       CABEÇALHO E NAVEGAÇÃO
+       ============================================= -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Navegação principal">
+
+      <!-- Logo / Nome da artista -->
+      <a href="#inicio" class="nav-logo" aria-label="Ir para o início">
+        Camila
+      </a>
+
+      <!-- Links de navegação (desktop) -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+
+      <!-- Controles do cabeçalho -->
+      <div class="nav-controls">
+        <!-- Botão de tema claro/escuro -->
+        <button
+          class="btn-theme"
+          id="btn-theme"
+          aria-label="Alternar tema claro e escuro"
+          title="Alternar tema"
+        >
+          <!-- Ícone sol (tema claro ativo) -->
+          <span class="icon-sun" aria-hidden="true">&#9788;</span>
+          <!-- Ícone lua (tema escuro ativo) -->
+          <span class="icon-moon" aria-hidden="true">&#9790;</span>
+        </button>
+
+        <!-- Botão hambúrguer (mobile) -->
+        <button
+          class="btn-menu"
+          id="btn-menu"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- =============================================
+       SEÇÃO HERO — APRESENTAÇÃO PRINCIPAL
+       ============================================= -->
+  <section class="hero" id="inicio" aria-label="Apresentação">
+
+    <!-- Fundo decorativo com textura artística -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-shape shape-1"></div>
+      <div class="hero-bg-shape shape-2"></div>
+    </div>
+
+    <div class="hero-content fade-in">
+      <!-- Subtítulo / categoria -->
+      <p class="hero-eyebrow">Artista Visual</p>
+
+      <!-- Nome principal com destaque tipográfico -->
+      <h1 class="hero-title">
+        Camila<br />
+        <em>— onde a arte<br />encontra a alma</em>
+      </h1>
+
+      <!-- Breve apresentação -->
+      <p class="hero-description">
+        Pintora, escultora e fotógrafa baseada no Brasil.
+        Minha obra explora a tensão entre o efêmero e o permanente,
+        traduzindo emoções em formas, texturas e luz.
+      </p>
+
+      <!-- Chamadas para ação -->
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn btn-primary">Ver portfólio</a>
+        <a href="#contato" class="btn btn-outline">Entrar em contato</a>
+      </div>
+    </div>
+
+    <!-- Imagem hero decorativa (placeholder artístico) -->
+    <div class="hero-image fade-in" aria-hidden="true">
+      <div class="hero-image-frame">
+        <div class="hero-image-placeholder">
+          <!-- Elemento visual decorativo em SVG inline -->
+          <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="400" height="500" fill="#333237"/>
+            <circle cx="200" cy="180" r="90" fill="none" stroke="#e7204e" stroke-width="2" opacity="0.6"/>
+            <circle cx="200" cy="180" r="60" fill="none" stroke="#e7204e" stroke-width="1" opacity="0.4"/>
+            <line x1="50" y1="320" x2="350" y2="320" stroke="#e7204e" stroke-width="1" opacity="0.5"/>
+            <text x="200" y="380" text-anchor="middle" fill="#ffffff" font-family="serif" font-size="14" opacity="0.5">adicione sua foto aqui</text>
+            <text x="200" y="400" text-anchor="middle" fill="#ffffff" font-family="serif" font-size="11" opacity="0.3">substitua este SVG por uma &lt;img&gt;</text>
+          </svg>
+        </div>
+        <!-- Para usar uma foto real, substitua o SVG acima por:
+             <img src="imagens/foto-camila.jpg" alt="Camila, artista visual" /> -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =============================================
+       SEÇÃO SOBRE — TRAJETÓRIA ARTÍSTICA
+       ============================================= -->
+  <section class="section sobre" id="sobre" aria-labelledby="sobre-titulo">
+    <div class="container">
+
+      <div class="section-header slide-up">
+        <span class="section-label">Trajetória</span>
+        <h2 class="section-title" id="sobre-titulo">Sobre mim</h2>
+      </div>
+
+      <div class="sobre-grid">
+
+        <!-- Coluna de texto -->
+        <div class="sobre-texto slide-up">
+          <p class="sobre-paragrafo destaque">
+            Desde criança, o mundo sempre fez mais sentido através das mãos —
+            modelando argila, misturando tintas, enquadrando a luz.
+          </p>
+          <p class="sobre-paragrafo">
+            Formada em Artes Visuais, desenvolvi minha linguagem artística na
+            interseção entre a pintura expressiva, a escultura tridimensional e
+            a fotografia documental. Cada obra nasce de uma inquietação genuína:
+            o desejo de tornar visível o que as palavras não alcançam.
+          </p>
+          <p class="sobre-paragrafo">
+            Ao longo da minha trajetória, participei de exposições coletivas e
+            individuais, colaborei com curadores independentes e construí um
+            acervo que dialoga com a arte contemporânea brasileira sem perder
+            sua identidade singular.
+          </p>
+          <p class="sobre-paragrafo">
+            Hoje, meu trabalho é voltado para quem busca arte com profundidade —
+            peças que habitam espaços e transformam quem as observa.
+          </p>
+        </div>
+
+        <!-- Coluna de dados / números -->
+        <div class="sobre-numeros slide-up">
+          <div class="numero-item">
+            <span class="numero-valor">8+</span>
+            <span class="numero-label">Anos de prática artística</span>
+          </div>
+          <div class="numero-item">
+            <span class="numero-valor">30+</span>
+            <span class="numero-label">Obras produzidas</span>
+          </div>
+          <div class="numero-item">
+            <span class="numero-valor">12</span>
+            <span class="numero-label">Exposições participadas</span>
+          </div>
+          <div class="numero-item">
+            <span class="numero-valor">3</span>
+            <span class="numero-label">Linguagens artísticas</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SEÇÃO HABILIDADES
+       ============================================= -->
+  <section class="section habilidades" id="habilidades" aria-labelledby="habilidades-titulo">
+    <div class="container">
+
+      <div class="section-header slide-up">
+        <span class="section-label">Especialidades</span>
+        <h2 class="section-title" id="habilidades-titulo">Habilidades</h2>
+      </div>
+
+      <div class="habilidades-grid">
+
+        <!-- Card: Pintura -->
+        <article class="habilidade-card slide-up" aria-label="Pintura">
+          <div class="habilidade-icone" aria-hidden="true">
+            <!-- Ícone SVG de pintura -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 40 C8 40 12 32 20 28 C28 24 36 26 40 20 C44 14 42 8 36 8 C30 8 26 14 28 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="38" r="4" fill="currentColor" opacity="0.3"/>
+              <circle cx="12" cy="38" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="habilidade-titulo">Pintura</h3>
+          <p class="habilidade-descricao">
+            Técnica em óleo, acrílica e aquarela. Minha pintura transita entre
+            o figurativo e o abstrato, com ênfase em texturas e camadas de cor
+            que criam profundidade emocional.
+          </p>
+          <div class="habilidade-barra" aria-label="Nível de habilidade: avançado">
+            <div class="habilidade-progresso" style="--progresso: 92%"></div>
+          </div>
+        </article>
+
+        <!-- Card: Escultura -->
+        <article class="habilidade-card slide-up" aria-label="Escultura">
+          <div class="habilidade-icone" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="24" cy="36" rx="12" ry="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 36 L16 16 L24 12 L32 16 L36 36" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <line x1="24" y1="12" x2="24" y2="36" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
+            </svg>
+          </div>
+          <h3 class="habilidade-titulo">Escultura</h3>
+          <p class="habilidade-descricao">
+            Trabalho com argila, gesso e materiais alternativos. A escultura me
+            permite explorar o volume, o tato e a presença física da obra —
+            uma conversa entre forma e espaço.
+          </p>
+          <div class="habilidade-barra" aria-label="Nível de habilidade: avançado">
+            <div class="habilidade-progresso" style="--progresso: 85%"></div>
+          </div>
+        </article>
+
+        <!-- Card: Fotografia -->
+        <article class="habilidade-card slide-up" aria-label="Fotografia">
+          <div class="habilidade-icone" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="14" width="36" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="27" r="7" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="27" r="3" fill="currentColor" opacity="0.4"/>
+              <path d="M18 14 L20 9 L28 9 L30 14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="37" cy="20" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="habilidade-titulo">Fotografia</h3>
+          <p class="habilidade-descricao">
+            Fotografia analógica e digital com foco em retratos e paisagens
+            urbanas. Uso a câmera como extensão do olhar — capturando instantes
+            que revelam o invisível do cotidiano.
+          </p>
+          <div class="habilidade-barra" aria-label="Nível de habilidade: intermediário-avançado">
+            <div class="habilidade-progresso" style="--progresso: 78%"></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SEÇÃO PORTFÓLIO — PROJETOS E TRABALHOS
+       ============================================= -->
+  <section class="section portfolio" id="portfolio" aria-labelledby="portfolio-titulo">
+    <div class="container">
+
+      <div class="section-header slide-up">
+        <span class="section-label">Obras</span>
+        <h2 class="section-title" id="portfolio-titulo">Portfólio</h2>
+        <p class="section-subtitulo">
+          Uma seleção de trabalhos que representam minha jornada artística.
+        </p>
+      </div>
+
+      <!-- Filtros de categoria -->
+      <div class="portfolio-filtros slide-up" role="group" aria-label="Filtrar obras por categoria">
+        <button class="filtro-btn ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button class="filtro-btn" data-filtro="pintura" aria-pressed="false">Pintura</button>
+        <button class="filtro-btn" data-filtro="escultura" aria-pressed="false">Escultura</button>
+        <button class="filtro-btn" data-filtro="fotografia" aria-pressed="false">Fotografia</button>
+      </div>
+
+      <!-- Grade de obras -->
+      <div class="portfolio-grid" id="portfolio-grid" role="list">
+
+        <!-- Obra 1 — Pintura -->
+        <article class="portfolio-item slide-up" data-categoria="pintura" role="listitem">
+          <div class="portfolio-imagem">
+            <!-- Placeholder visual — substitua por <img src="imagens/obra1.jpg" alt="..."> -->
+            <div class="portfolio-placeholder" style="--cor-placeholder: #8B4A6B;">
+              <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="300" height="220" fill="#8B4A6B"/>
+                <circle cx="150" cy="90" r="50" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.4"/>
+                <path d="M80 160 Q150 120 220 160" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.5"/>
+                <text x="150" y="200" text-anchor="middle" fill="#fff" font-family="serif" font-size="11" opacity="0.6">pintura — óleo sobre tela</text>
+              </svg>
+            </div>
+            <!-- Overlay com informações -->
+            <div class="portfolio-overlay">
+              <span class="portfolio-categoria">Pintura</span>
+              <h3 class="portfolio-nome">Cicatrizes de Luz</h3>
+              <p class="portfolio-ano">2024 · Óleo sobre tela · 80×100 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Obra 2 — Escultura -->
+        <article class="portfolio-item slide-up" data-categoria="escultura" role="listitem">
+          <div class="portfolio-imagem">
+            <div class="portfolio-placeholder" style="--cor-placeholder: #4A5568;">
+              <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="300" height="220" fill="#4A5568"/>
+                <ellipse cx="150" cy="160" rx="60" ry="15" fill="none" stroke="#fff" stroke-width="1" opacity="0.4"/>
+                <path d="M110 160 L120 80 L150 60 L180 80 L190 160" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.5"/>
+                <text x="150" y="205" text-anchor="middle" fill="#fff" font-family="serif" font-size="11" opacity="0.6">escultura — argila e gesso</text>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <span class="portfolio-categoria">Escultura</span>
+              <h3 class="portfolio-nome">Forma Suspensa</h3>
+              <p class="portfolio-ano">2023 · Argila e gesso · 40×60 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Obra 3 — Fotografia -->
+        <article class="portfolio-item slide-up" data-categoria="fotografia" role="listitem">
+          <div class="portfolio-imagem">
+            <div class="portfolio-placeholder" style="--cor-placeholder: #2D3748;">
+              <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="300" height="220" fill="#2D3748"/>
+                <rect x="60" y="50" width="180" height="120" rx="4" fill="none" stroke="#fff" stroke-width="1" opacity="0.4"/>
+                <circle cx="150" cy="110" r="35" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
+                <circle cx="150" cy="110" r="12" fill="#fff" opacity="0.2"/>
+                <text x="150" y="200" text-anchor="middle" fill="#fff" font-family="serif" font-size="11" opacity="0.6">fotografia — série urbana</text>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <span class="portfolio-categoria">Fotografia</span>
+              <h3 class="portfolio-nome">Silêncios Urbanos</h3>
+              <p class="portfolio-ano">2024 · Fotografia digital · Série</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Obra 4 — Pintura -->
+        <article class="portfolio-item slide-up" data-categoria="pintura" role="listitem">
+          <div class="portfolio-imagem">
+            <div class="portfolio-placeholder" style="--cor-placeholder: #744210;">
+              <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="300" height="220" fill="#744210"/>
+                <path d="M40 180 C80 100 140 140 150 80 C160 20 220 60 260 40" stroke="#fff" stroke-width="2" fill="none" opacity="0.5"/>
+                <path d="M40 200 C80 120 140 160 150 100 C160 40 220 80 260 60" stroke="#fff" stroke-width="1" fill="none" opacity="0.3"/>
+                <text x="150" y="210" text-anchor="middle" fill="#fff" font-family="serif" font-size="11" opacity="0.6">pintura — acrílica sobre madeira</text>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <span class="portfolio-categoria">Pintura</span>
+              <h3 class="portfolio-nome">Raízes</h3>
+              <p class="portfolio-ano">2023 · Acrílica sobre madeira · 60×80 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Obra 5 — Fotografia -->
+        <article class="portfolio-item slide-up" data-categoria="fotografia" role="listitem">
+          <div class="portfolio-imagem">
+            <div class="portfolio-placeholder" style="--cor-placeholder: #1A202C;">
+              <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="300" height="220" fill="#1A202C"/>
+                <line x1="0" y1="110" x2="300" y2="110" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+                <line x1="150" y1="0" x2="150" y2="220" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+                <circle cx="150" cy="110" r="60" fill="none" stroke="#e7204e" stroke-width="1" opacity="0.5"/>
+                <text x="150" y="200" text-anchor="middle" fill="#fff" font-family="serif" font-size="11" opacity="0.6">fotografia — retrato analógico</text>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <span class="portfolio-categoria">Fotografia</span>
+              <h3 class="portfolio-nome">Dentro do Olhar</h3>
+              <p class="portfolio-ano">2022 · Fotografia analógica · P&B</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Obra 6 — Escultura -->
+        <article class="portfolio-item slide-up" data-categoria="escultura" role="listitem">
+          <div class="portfolio-imagem">
+            <div class="portfolio-placeholder" style="--cor-placeholder: #553C9A;">
+              <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="300" height="220" fill="#553C9A"/>
+                <rect x="100" y="60" width="100" height="120" rx="50" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.4"/>
+                <line x1="150" y1="60" x2="150" y2="180" stroke="#fff" stroke-width="1" opacity="0.3"/>
+                <text x="150" y="208" text-anchor="middle" fill="#fff" font-family="serif" font-size="11" opacity="0.6">escultura — materiais alternativos</text>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <span class="portfolio-categoria">Escultura</span>
+              <h3 class="portfolio-nome">Vazio Habitado</h3>
+              <p class="portfolio-ano">2024 · Técnica mista · 30×80 cm</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- Fim portfolio-grid -->
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       SEÇÃO CONTATO
+       ============================================= -->
+  <section class="section contato" id="contato" aria-labelledby="contato-titulo">
+    <div class="container">
+
+      <div class="section-header slide-up">
+        <span class="section-label">Vamos conversar</span>
+        <h2 class="section-title" id="contato-titulo">Contato</h2>
+        <p class="section-subtitulo">
+          Aberta a colaborações, exposições, encomendas e parcerias criativas.
+        </p>
+      </div>
+
+      <div class="contato-grid">
+
+        <!-- Informações de contato -->
+        <div class="contato-info slide-up">
+          <div class="contato-item">
+            <span class="contato-rotulo">E-mail</span>
+            <a href="mailto:camila@exemplo.com" class="contato-valor">camila@exemplo.com</a>
+          </div>
+          <div class="contato-item">
+            <span class="contato-rotulo">Instagram</span>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="contato-valor">@camila.arte</a>
+          </div>
+          <div class="contato-item">
+            <span class="contato-rotulo">Localização</span>
+            <span class="contato-valor">Brasil</span>
+          </div>
+          <p class="contato-disponibilidade">
+            <span class="disponibilidade-dot" aria-hidden="true"></span>
+            Disponível para novos projetos
+          </p>
+        </div>
+
+        <!-- Formulário de contato -->
+        <form class="contato-form slide-up" id="contato-form" novalidate aria-label="Formulário de contato">
+
+          <div class="form-grupo">
+            <label for="nome" class="form-label">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              class="form-input"
+              placeholder="Seu nome"
+              required
+              autocomplete="name"
+            />
+            <span class="form-erro" id="erro-nome" role="alert"></span>
+          </div>
+
+          <div class="form-grupo">
+            <label for="email" class="form-label">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              placeholder="seu@email.com"
+              required
+              autocomplete="email"
+            />
+            <span class="form-erro" id="erro-email" role="alert"></span>
+          </div>
+
+          <div class="form-grupo">
+            <label for="assunto" class="form-label">Assunto</label>
+            <select id="assunto" name="assunto" class="form-input form-select">
+              <option value="">Selecione um assunto</option>
+              <option value="exposicao">Exposição / Curadoria</option>
+              <option value="encomenda">Encomenda de obra</option>
+              <option value="colaboracao">Colaboração artística</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              class="form-input form-textarea"
+              placeholder="Conte-me sobre seu projeto ou interesse..."
+              rows="5"
+              required
+            ></textarea>
+            <span class="form-erro" id="erro-mensagem" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Enviar mensagem
+          </button>
+
+          <!-- Mensagem de sucesso (oculta por padrão) -->
+          <div class="form-sucesso" id="form-sucesso" role="status" aria-live="polite" hidden>
+            Mensagem enviada com sucesso! Em breve entrarei em contato.
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       RODAPÉ
+       ============================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+
+      <div class="footer-esquerda">
+        <span class="footer-nome">Camila</span>
+        <span class="footer-descricao">Artista Visual</span>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <a href="#sobre" class="footer-link">Sobre</a>
+        <a href="#portfolio" class="footer-link">Portfólio</a>
+        <a href="#contato" class="footer-link">Contato</a>
+      </nav>
+
+      <p class="footer-copy">
+        &copy; <span id="ano-atual"></span> Camila. Todos os direitos reservados.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+
+</body>
+</html>
